@@ -1,0 +1,54 @@
+<div class="forecast-container">
+    <header class="header">
+        <div class="header-container"></div>
+        <div class="wrap">
+            <div class="header-logo">
+                <div class="logo">
+                    <img src="../toastbolt.png" alt="logo" width="31" height="30">
+                    <div style="padding-left: 8px;">Toasty Weather</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="enter-zip-container">
+        <div class="enter-zip-section">
+            <h2>Your Weekly Forecast</h2>
+        </div>
+    </div>
+    <div id="map-container"></div>
+    <div class="forecast-display">
+        <div class="forecast-panel">
+            {{#each data}}
+            <div class="forecast-box">
+                <div class="forecast-title">
+                    <p class="day">{{formatRelative this.time}}</p>
+                    <p class="date">{{formatDate this.time}}</p>
+                </div>
+                <div class="weather-container">
+                    <div class="weather">
+                        <div class="degrees">
+                            <div class="high-degrees">{{distanceFixed this.temperatureHigh}}&#176;<p>High</p></div>
+                            <div class="low-degrees">{{distanceFixed this.temperatureLow}}&#176;<p>Low</p></div>
+                        </div>
+                        <div class="weather-icon">
+                            <img src="../{{this.icon}}.png" alt="{{this.icon}}">
+                        </div>
+                    </div>
+                    <div class="weather-type">{{this.summary}}</div>
+                    <div class="weather-description">
+                        <div class="feels-like">
+                            <p>Feels Like: {{distanceFixed this.apparentTemperatureHigh}}&#176;</p>
+                        </div>
+                        <div class="uv">
+                            <p>Precipitation: {{math this.precipProbability "*" 100}}%</p>
+                        </div>
+                        <div class="wind">
+                            <p>Wind Speed: {{distanceFixed this.windSpeed}} mph</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
