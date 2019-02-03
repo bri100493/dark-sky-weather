@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack",
+    "prestart": "npm run build",
     "start": "node ./src/index.js"
   },
   "author": "Toast Marketing",
