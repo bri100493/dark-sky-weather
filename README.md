@@ -9,3 +9,5 @@ npm start //start the server
 
 ```
 Now running on localhost:3000
+
+ You can test drive Toasty Weather [here](https://toasty-weather-dark-sky.herokuapp.com/).
