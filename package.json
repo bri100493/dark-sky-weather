@@ -19,6 +19,7 @@
     "handlebars.moment": "^1.0.4",
     "react-skycons": "^0.7.0",
     "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
     "skycons": "^1.0.0",
     "zipcodes": "^8.0.0"
   },

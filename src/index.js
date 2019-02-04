@@ -8,10 +8,12 @@ const zipcodes = require('zipcodes');
 const handlebars = require('handlebars');
 const handlebarsIntl = require('handlebars-intl');
 const momentHandler = require('handlebars.moment');
-const skycons = require('skycons');
+const favicon = require('serve-favicon');
 
 //SET UP PLUGINS AND MIDDLEWARE
 app.use(express.static('assets'))
+
+app.use(favicon(__dirname + '/../assets/favicon.ico'));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -55,9 +57,7 @@ app.get('/weather/:zipcode', (req, res) => {
                 let newDate = new Date().setDate(today.getDate() + i);
                 data.daily.data[i].time = newDate;    
             }
-
             res.render('forecast', data.daily);
-            //res.json(data);
         }
         else {
             res.json(error);
