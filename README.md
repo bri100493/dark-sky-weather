@@ -1,7 +1,7 @@
 # dark-sky-weather
 Dark-Sky Weather is  a web page that displays this week's weather, using Dark Sky's API.  This is made using Node and Express, with Handlebars for dynamic assets.
 
-You can get your weather [here](https://toasty-weather-dark-sky.herokuapp.com/).
+You can check your weather [here](https://toasty-weather-dark-sky.herokuapp.com/).
 
 # instructions
 ```
